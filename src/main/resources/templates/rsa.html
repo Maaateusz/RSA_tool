@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RSA</title>
+    <script src="src/js/rsa.js" type="text/javascript"></script>
+    <link href="src/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+    <div class="div_3">
+        <h1>RSA GENERATOR</h1>
+        <div id="loader"></div>
+        <div>
+            <form>
+                <input onclick="generate_RSA()" class="button" type="button" name="rsa" value="Generate">
+            </form>
+        </div>
+        <div>
+            Generated Date
+            <textarea  id="generated_date_text"></textarea>
+            Key Lenght
+            <textarea  id="key_lenght_text"></textarea>
+            Public Key
+            <textarea  id="public_key_text"></textarea>
+            Private Key
+            <textarea  id="private_key_text"></textarea>
+        </div>
+    </div>
+
+    <div class="div_3">
+        <h1>Encrypt Text</h1>
+        <form>
+            RSA Public Key
+            <input id="public_key" type="text">
+            Text Encrypted Data
+            <textarea  id="pre_data"></textarea>
+            <input onclick="encrypt()" class="button" type="button" name="rsa" value="Encrypt">
+        </form>
+        <div>
+            Encrypted Data
+            <textarea  id="encrypted_data"></textarea>
+        </div>
+    </div>
+
+    <div class="div_3">
+        <h1>Decrypted Text</h1>
+        <form>
+            RSA Private Key
+            <input id="private_key" type="text">
+            Text Encrypted Data
+            <textarea  id="post_data"></textarea>
+            <input onclick="decrypt()" class="button" type="button" name="rsa" value="Decrypt">
+        </form>
+        <div>
+            Decrypted Data
+            <textarea  id="decrypted_data"></textarea>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
